@@ -24,6 +24,7 @@ MonoBehaviour:
   - name: Ataque Pesado
     animationName: Attack2
     minDamage: 40
-    maxDamage: 75
+    maxDamage: 70
     chargeParticles: {fileID: 716877360188685798, guid: d64342ac3b7140a43b04a4ca772e2b97, type: 3}
     attackParticles: {fileID: 36964642572784851, guid: e48ceaec588024c4dbcedad15bc5c295, type: 3}
+  chargeTime: 2
