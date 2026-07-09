@@ -30,7 +30,7 @@ public class FightManager : MonoBehaviour
             poolManager.GetObject(fighter.FighterData.appearParticles, fighter.transform.position);
             SoundManager.instance.Play(fighter.FighterData.appearSoundName);
             fighters.Add(fighter);
-            DialogSystem.Instance.ShowDialog(fighter.FighterData.fighterName + "has joined the fight!");
+            DialogSystem.Instance.ShowDialog(fighter.FighterData.fighterName + " has joined the fight! ");
             if(fighters.Count >= minimumFighters)
             {
                 onFightReady?.Invoke();
@@ -72,7 +72,7 @@ public class FightManager : MonoBehaviour
              defender.transform.LookAt(attacker.transform);
             attacker.Animator.Play("Charge",0,0f);
             yield return new WaitForSeconds(attacker.FighterData.chargeTime);
-            DialogSystem.Instance.ShowDialog(attacker.FighterData.fighterName+"attacks with" + attackData.name + "!");
+            DialogSystem.Instance.ShowDialog(attacker.FighterData.fighterName+" attacks with " + attackData.name + "!");
              poolManager.GetObject(attackData.chargeParticles, attacker.transform.position);
             attacker.Animator.Play(attackData.animationName, 0, 0f);
              SoundManager.instance.Play(attackData.attakcSoundName);
@@ -90,7 +90,7 @@ public class FightManager : MonoBehaviour
             {
                 
                 SoundManager.instance.Play(defender.FighterData.deadSoundName);
-                DialogSystem.Instance.ShowDialog(attacker.FighterData.fighterName + "wins the fiht!");
+                DialogSystem.Instance.ShowDialog(attacker.FighterData.fighterName + " wins the fight! ");
                 RemoveFighter(defender);
                 FighterWin(attacker);
             }
