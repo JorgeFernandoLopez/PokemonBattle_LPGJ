@@ -75,7 +75,7 @@ public class FightManager : MonoBehaviour
             DialogSystem.Instance.ShowDialog(attacker.FighterData.fighterName+" attacks with " + attackData.name + "!");
              poolManager.GetObject(attackData.chargeParticles, attacker.transform.position);
             attacker.Animator.Play(attackData.animationName, 0, 0f);
-             SoundManager.instance.Play(attackData.attakcSoundName);
+             SoundManager.instance.Play(attackData.attackSoundName);
             yield return null;
             yield return new WaitForSeconds(attacker.Animator.GetCurrentAnimatorStateInfo(0).length);
             poolManager.GetObject(attackData.attackParticles, defender.transform.position);
@@ -90,9 +90,13 @@ public class FightManager : MonoBehaviour
             {
                 
                 SoundManager.instance.Play(defender.FighterData.deadSoundName);
-                DialogSystem.Instance.ShowDialog(attacker.FighterData.fighterName + "  wins the fight! ");
-                RemoveFighter(defender);
-                FighterWin(attacker);
+                  RemoveFighter(defender);
+                  if (fighters.Count == 1)
+                {
+                    DialogSystem.Instance.ShowDialog(attacker.FighterData.fighterName + "  wins the fight! ");
+                    FighterWin(attacker);
+                }
+                
             }
             yield return new WaitForSeconds(1.5f);
         }

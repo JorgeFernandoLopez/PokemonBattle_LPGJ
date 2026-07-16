@@ -17,20 +17,20 @@ MonoBehaviour:
   attacks:
   - name: Ataque Ligero
     animationName: Attack1
-    attakcSoundName: Tyranitar_Attack1
+    attackSoundName: Tyranitar_Attack1
     minDamage: 30
     maxDamage: 60
-    chargeParticles: {fileID: 716877360188685798, guid: d64342ac3b7140a43b04a4ca772e2b97, type: 3}
+    chargeParticles: {fileID: 3989915253331999320, guid: a6e446e601a5dde4a9689cceefaf3b6e, type: 3}
     attackParticles: {fileID: 9203631026322384412, guid: c7422017d627bb44788b5beb89a142e8, type: 3}
   - name: Ataque Pesado
     animationName: Attack2
-    attakcSoundName: Tyranitar_Attack2
+    attackSoundName: Tyranitar_Attack1
     minDamage: 40
     maxDamage: 70
-    chargeParticles: {fileID: 716877360188685798, guid: d64342ac3b7140a43b04a4ca772e2b97, type: 3}
+    chargeParticles: {fileID: 3989915253331999320, guid: a6e446e601a5dde4a9689cceefaf3b6e, type: 3}
     attackParticles: {fileID: 36964642572784851, guid: e48ceaec588024c4dbcedad15bc5c295, type: 3}
   chargeTime: 2
-  appearParticles: {fileID: 716877360188685798, guid: d64342ac3b7140a43b04a4ca772e2b97, type: 3}
+  appearParticles: {fileID: 3989915253331999320, guid: a6e446e601a5dde4a9689cceefaf3b6e, type: 3}
   appearSoundName: Tyranitar_Appear
   damageSoundName: Tyranitar_Damage
   deadSoundName: Tyranitar_Death
